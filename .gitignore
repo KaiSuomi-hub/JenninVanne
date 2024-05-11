@@ -15,7 +15,8 @@ apikey.js
 *.rar
 #don't upload builds
 */build/
-
+#no proteus backups
+/Project Backups/
 #GIT
 .git/
 # Logs
