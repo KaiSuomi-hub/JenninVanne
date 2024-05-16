@@ -80,62 +80,16 @@ void setup() {
   }
 
 
-  int rootFileCount = 0;
-  if (!root.open("/")) {
+   if (!root.open("/")) {
     error("open root");
   }
- 
-  // Create a new folder.
-  if (!sd.mkdir("Folder1")) {
-    error("Create Folder1 failed");
-  }
-  cout << F("Created Folder1\n");
-
-  // Create a file in Folder1 using a path.
-  if (!file.open("Folder1/file1.txt", O_WRONLY | O_CREAT)) {
-    error("create Folder1/file1.txt failed");
-  }
-  file.close();
-  cout << F("Created Folder1/file1.txt\n");
-
-  // Change volume working directory to Folder1.
-  if (!sd.chdir("Folder1")) {
-    error("chdir failed for Folder1.\n");
-  }
-  cout << F("chdir to Folder1\n");
-
-  // Create File2.txt in current directory.
-  if (!file.open("File2.txt", O_WRONLY | O_CREAT)) {
-    error("create File2.txt failed");
-  }
-  file.close();
-  cout << F("Created File2.txt in current directory\n");
 
   cout << F("\nList of files on the SD.\n");
   sd.ls("/", LS_R);
 
-  // Remove files from current directory.
-  if (!sd.remove("file1.txt") || !sd.remove("File2.txt")) {
-    error("remove failed");
-  }
-  cout << F("\nfile1.txt and File2.txt removed.\n");
 
-  // Change current directory to root.
-  if (!sd.chdir()) {
-    error("chdir to root failed.\n");
-  }
 
-  cout << F("\nList of files on the SD.\n");
-  sd.ls(LS_R);
 
-  // Remove Folder1.
-  if (!sd.rmdir("Folder1")) {
-    error("rmdir for Folder1 failed\n");
-  }
-  cout << F("\nFolder1 removed.\n");
-  cout << F("\nList of files on the SD.\n");
-  sd.ls(LS_R);
-  cout << F("Done!\n");
 }
 //------------------------------------------------------------------------------
 // Nothing happens in loop.

@@ -16,14 +16,13 @@ apikey.js
 #don't upload builds
 */build/
 #no proteus backups
-/Project Backups
+/Project*/
 #GIT
 .git/
 # Logs
 logs
 *.log
-
-# Runtime data
+ # Runtime data
 pids
 *.pid
 *.seed
@@ -115,3 +114,6 @@ desktop.ini
 *.log
 *.sql
 *.sqlite
+/hoop/hoopFirmware/codeExamples
+*.workspace
+JenninVanne.pdsprj.BETA-PC.beta-pc.workspace
