@@ -16,7 +16,7 @@ apikey.js
 #don't upload builds
 */build/
 #no proteus backups
-/Project Backups/
+/Project Backups
 #GIT
 .git/
 # Logs
@@ -29,6 +29,7 @@ pids
 *.seed
 *.pid.lock
 
+*.workspace
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
