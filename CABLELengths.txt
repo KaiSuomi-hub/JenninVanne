@@ -1,0 +1,27 @@
+Parallel leads. 9x0.75 diameter cable.
+first leads positive
+500
+1
+500
+2
+500
+3
+500
+4
+second leads negative
+260
+1
+500
+2
+500
+3
+500
+4
+backfeed positive to positive
+260
+
+
+
+Return 
+2080 1.0mm diameter cable, so we can handle 10 amps.
+
